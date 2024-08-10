@@ -1,6 +1,6 @@
 import React, { ReactElement, ReactNode } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import * as S from './styles/FadeModal.styled';
+import {AnimatePresence} from "framer-motion";
 
 
 interface FadeModalProps {

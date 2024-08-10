@@ -3,6 +3,7 @@ import { combine, devtools } from "zustand/middleware";
 
 export enum ModalType {
   EMPTY = "",
+  SIDE_MENU='side_menu'
 }
 
 type ModalInitialState = {

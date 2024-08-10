@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {motion} from "framer-motion";
 
-export const ModalLayout = styled(motion.dialog)`
+export const ModalLayout = styled(motion.div)`
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -54,7 +54,7 @@ export const ModalContainer = styled.div`
 `;
 
 
-const ModalBody = styled(motion.div)<{
+export const ModalBody = styled(motion.div)<{
   $showClose?: boolean;
   $maxWidth?: number;
 }>`
@@ -76,7 +76,7 @@ const ModalBody = styled(motion.div)<{
   overflow-x: hidden;
 `;
 
-const ModalCloseButtonWrapper = styled.header`
+export const ModalCloseButtonWrapper = styled.header`
   width: 100%;
   display: flex;
   justify-content: flex-end;
