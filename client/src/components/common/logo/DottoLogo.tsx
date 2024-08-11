@@ -19,7 +19,7 @@ const DottoLogoLayout = styled.span`
 export const DottoLogo = (): ReactElement => {
   return (
     <DottoLogoLayout>
-      <Image src={'/images/logo.svg'} priority={true} alt={'dotto-logo'} width={103} height={40} />
+      <Image src={'/images/logo.svg'} layout="responsive" priority={true} alt={'dotto-logo'} width={103} height={40} />
     </DottoLogoLayout>
   )
 }
