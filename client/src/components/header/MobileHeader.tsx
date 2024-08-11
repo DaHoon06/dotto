@@ -4,6 +4,8 @@ import {HamburgerButton} from "@components/common/buttons/HamburgerButton";
 import {ModalAnimation, ModalHandler} from "@components/common/modal/ModalHandler";
 import {ReactElement} from "react";
 import useModalStore, {ModalType} from "@components/common/modal/store/modalStore";
+import { IoSearchSharp } from "react-icons/io5";
+import FlexBox from "@components/common/boxes/FlexBox";
 
 const MobileHeaderLayout = styled.div`
     display: none;
@@ -25,10 +27,20 @@ export const MobileHeader = (): ReactElement => {
   return (
       <MobileHeaderLayout>
         <DottoLogo />
-        <HamburgerButton onClick={handleClickSideMenu} />
+        <FlexBox $flexDirection={'row'} $gap={10} $justifyContent={'flex-end'}>
+          <button type={'button'}>
+            <IoSearchSharp size={20}/>
+          </button>
+          <HamburgerButton onClick={handleClickSideMenu}/>
+        </FlexBox>
+
         <ModalHandler modalType={ModalType.SIDE_MENU} animation={ModalAnimation.SLIDE}>
           <div>
-            TEST
+            <ul>
+              <li>HOME</li>
+              <li>닷투 게시판</li>
+              <li>고객지원</li>
+            </ul>
           </div>
         </ModalHandler>
       </MobileHeaderLayout>

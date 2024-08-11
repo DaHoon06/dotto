@@ -5,6 +5,8 @@ import styled from "styled-components";
 import {MenuList} from "@components/header/MenuList";
 import {Avatar} from "@components/common/avatar/Avatar";
 import {MobileHeader} from "@components/header/MobileHeader";
+import {SearchBar} from "@components/search/SearchBar";
+import FlexBox from "@components/common/boxes/FlexBox";
 
 const HeaderContainer = styled.div`
     width: 100%;
@@ -29,7 +31,10 @@ export const Header = (): ReactElement => {
   return (
     <HeaderLayout>
       <HeaderContainer>
-        <DottoLogo />
+        <FlexBox $justifyContent={"flex-start"} $alignItems={"flex-start"} $flexDirection={'row'}>
+          <DottoLogo />
+          <SearchBar onAddKeyword={() => {}} />
+        </FlexBox>
         <ProfileBox>
           <div>
             <Avatar />

@@ -39,7 +39,7 @@ class DottoDocument extends Document {
 
   render() {
     return (
-      <Html lang="en">
+      <Html lang="ko">
         <Head>
           <link
             rel="stylesheet"

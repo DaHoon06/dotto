@@ -8,7 +8,7 @@ export const BackgroundOverlay = styled(motion.div)`
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 10; // Ensure it is below the modal
+    z-index: 10;
 `;
 
 export const ModalLayout = styled.div`
@@ -18,9 +18,9 @@ export const ModalLayout = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: flex-end; // Start from the right
+    justify-content: flex-end; 
     align-items: center;
-    z-index: 20; // Ensure it is above the background
+    z-index: 20; 
 `;
 
 export const ModalContainer = styled(motion.div)`
@@ -30,7 +30,7 @@ export const ModalContainer = styled(motion.div)`
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 `;
 
