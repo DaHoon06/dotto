@@ -39,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 100%;
         font: inherit;
         vertical-align: baseline;
-        font-family:  "NanumSquare", "Nanum Gothic", sans-serif, "Noto Serif KR", serif, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+        font-family: "Pretendard", "NanumSquare", "Nanum Gothic", sans-serif, "Noto Serif KR", serif, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     }
 
     /* HTML5 display-role reset for older browsers */
@@ -188,6 +188,9 @@ export const GlobalStyle = createGlobalStyle`
       --white150: #f8f8f8;
       --black000: #000;
       --black050: #222;
+      
+      --textDefault: #222;
+      --textWhite: #fff;
     }
 
 
@@ -200,5 +203,10 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body[data-theme="dark"] {
+      --white000: #fff;
+      --white100: #fbfbfb;
+      --white150: #f8f8f8;
+      --black000: #000;
+      --black050: #222;
     }
 `;

@@ -10,7 +10,7 @@ import { ServerStyleSheet } from "styled-components";
 
 class DottoDocument extends Document {
   static async getInitialProps(
-    ctx: DocumentContext,
+    ctx: DocumentContext
   ): Promise<DocumentInitialProps> {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
@@ -44,6 +44,12 @@ class DottoDocument extends Document {
           <link
             rel="stylesheet"
             type="text/css"
+            href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css"
+            crossOrigin={"anonymous"}
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
             href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css"
             crossOrigin={"anonymous"}
           />
@@ -53,15 +59,13 @@ class DottoDocument extends Document {
             crossOrigin={"anonymous"}
           />
           <link
+            href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
             rel="stylesheet"
-            type="text/css"
-            href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css"
-            crossOrigin={"anonymous"}
           />
         </Head>
         <body>
-        <Main />
-        <NextScript />
+          <Main />
+          <NextScript />
         </body>
       </Html>
     );
