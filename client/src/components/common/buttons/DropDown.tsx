@@ -90,7 +90,17 @@ export const DropDownLayout = styled.div<DropDownProps>`
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 99;
 
+    hr {
+      border: none;
+      border-top: 1px solid #d1d1d1;
+      margin: 0.5em 0;
+    }
+
     ${DropDownItem} {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 8px;
       padding: 0.6em 1em;
       cursor: pointer;
       transition: background-color 0.2s ease;
