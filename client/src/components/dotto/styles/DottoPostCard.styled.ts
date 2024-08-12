@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const DottoPostCardLayout = styled.article`
   height: 442px;
-  width: 288px;
+  min-width: 288px;
+  width: auto;
   border: none;
   overflow: hidden;
   position: relative;
