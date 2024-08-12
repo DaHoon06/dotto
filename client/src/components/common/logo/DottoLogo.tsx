@@ -9,10 +9,6 @@ const DottoLogoLayout = styled.span`
   .logo {
     min-width: 82px;
   }
-
-  @media (max-width: 768px) {
-    width: 90px;
-  }
 `;
 
 export const DottoLogo = (): ReactElement => {
