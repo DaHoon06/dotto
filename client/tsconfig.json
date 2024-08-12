@@ -17,6 +17,7 @@
       "@components/*": ["./components/*"],
       "@layouts/*": ["./layouts/*"],
       "@pages/*": ["./pages/*"],
+      "@interfaces/*": ["./interfaces/*"],
       "@styles/*": ["./styles/*"],
       "@lib/*": ["./lib/*"],
       "@images/*": ["../public/images/*"]
