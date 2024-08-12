@@ -11,6 +11,7 @@ export const CarouselSwipeLayout = styled.div`
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    position: absolute;
 
     .carouselCount {
       position: relative;

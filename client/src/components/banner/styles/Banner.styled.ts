@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const BannerLayout = styled.section`
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.white100};
+  background-color: ${({ theme }) => theme.colors.black000};
   display: inline-block;
 
   div {
     width: 100%;
-    max-width: 1024px;
+    max-width: 1200px;
     margin: 0 auto;
     position: relative;
     height: auto;
