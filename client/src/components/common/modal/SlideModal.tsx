@@ -1,6 +1,6 @@
 import React, { ReactElement, ReactNode } from "react";
 import { AnimatePresence } from "framer-motion";
-import * as S from './styles/SlideModal.styled';
+import * as S from "./styles/SlideModal.styled";
 
 interface SlideModalProps {
   isOpen: boolean;
@@ -26,17 +26,21 @@ export const SlideModal = (props: SlideModalProps): ReactElement => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.4 }}
           />
           <S.ModalLayout onClick={outClick ? outClickEvent : () => {}}>
             <S.ModalContainer
               key="slide-modal"
-              initial={{ opacity: 0, x: "100%" }} // Start position
-              animate={{ opacity: 1, x: 0 }} // Enter animation
-              exit={{ opacity: 0, x: "100%" }} // Exit animation
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              initial={{ opacity: 0, x: "100%" }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: "100%" }}
+              transition={{ stiffness: 300 }}
             >
-              <S.ModalBody ref={ele} $showClose={showClose} $maxWidth={maxWidth}>
+              <S.ModalBody
+                ref={ele}
+                $showClose={showClose}
+                $maxWidth={maxWidth}
+              >
                 {!!showClose && (
                   <S.ModalCloseButtonWrapper>
                     <button

@@ -1,0 +1,30 @@
+$size: 1;
+$total: 101;
+
+@for $size from 1 to $total {
+  .mt-#{$size} {
+    margin-top: $size+px;
+  }
+  .ml-#{$size} {
+    margin-left: $size+px;
+  }
+  .mr-#{$size} {
+    margin-right: $size+px;
+  }
+  .mb-#{$size} {
+    margin-bottom: $size+px;
+  }
+
+  .pt-#{$size} {
+    padding-top: $size+px;
+  }
+  .pl-#{$size} {
+    padding-left: $size+px;
+  }
+  .pr-#{$size} {
+    padding-right: $size+px;
+  }
+  .pb-#{$size} {
+    padding-bottom: $size+px;
+  }
+}

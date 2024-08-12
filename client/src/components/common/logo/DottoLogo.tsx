@@ -1,25 +1,32 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styled from "styled-components";
-import {ReactElement} from "react";
+import { ReactElement } from "react";
 
 const DottoLogoLayout = styled.span`
-    display: inline-block;
-    width: 103px; /* Default width */
+  display: inline-block;
+  width: 103px;
 
-    /* Responsive styles */
-    @media (max-width: 768px) {
-        width: 80px; /* Adjust width for tablets and small screens */
-    }
+  .logo {
+    min-width: 82px;
+  }
 
-    @media (max-width: 480px) {
-        width: 60px; /* Adjust width for mobile screens */
-    }
+  @media (max-width: 768px) {
+    width: 90px;
+  }
 `;
 
 export const DottoLogo = (): ReactElement => {
   return (
     <DottoLogoLayout>
-      <Image src={'/images/logo.svg'} layout="responsive" priority={true} alt={'dotto-logo'} width={103} height={40} />
+      <Image
+        className={"logo"}
+        src={"/images/logo.svg"}
+        layout={"responsive"}
+        priority={true}
+        alt={"dotto-logo"}
+        width={103}
+        height={40}
+      />
     </DottoLogoLayout>
-  )
-}
+  );
+};

@@ -1,0 +1,94 @@
+.react-datepicker-popper {
+  z-index: 9999;
+}
+
+.react-datepicker__triangle {
+  display: none !important;
+}
+
+// disabled 시 텍스트 색 변경
+.react-datepicker__time-list-item--disabled {
+  color: #4b4b4b !important;
+
+  &:hover {
+    cursor: default !important;
+  }
+
+  &.react-datepicker__time-list-item:hover {
+    background-color: transparent !important;
+  }
+}
+
+.react-datepicker {
+  font-family: "Pretendard Variable", Pretendard, "Nanum Gothic", sans-serif;
+  border: 1px solid #383838;
+  border-radius: 0;
+  position: relative;
+  left: 58px;
+  bottom: 8px;
+
+  // 선택 못하는 날짜
+  .react-datepicker__day--disabled {
+    background-color: #3f3f3f;
+    color: #858585;
+    border-radius: 10px;
+  }
+
+  .react-datepicker__time {
+    background-color: #000;
+  }
+
+  .react-datepicker__time-container {
+    border-color: #383838;
+  }
+
+  .react-datepicker__header {
+    background-color: #222;
+    color: white;
+    border-bottom: none;
+    border-radius: 0;
+
+    .react-datepicker-time__header {
+      color: #fff;
+    }
+
+    .react-datepicker__day-names {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+
+      .react-datepicker__day-name {
+        color: #fff;
+        font-weight: 700;
+        width: 36px;
+      }
+    }
+  }
+
+  .react-datepicker__triangle {
+    display: none;
+  }
+}
+
+.react-datepicker__time-list-item {
+  &:hover {
+    background-color: #333333 !important;
+  }
+}
+
+.react-datepicker__current-month,
+.react-datepicker {
+  color: #fff;
+}
+
+.react-datepicker-wrapper {
+  min-width: 100px;
+}
+
+// 프로젝트 리스트의 캘린더에만 적용
+.group_options {
+  .react-datepicker__tab-loop {
+    position: absolute;
+  }
+}
