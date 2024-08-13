@@ -4,6 +4,7 @@ export const BannerLayout = styled.section`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.black000};
   display: inline-block;
+  margin-bottom: 2em;
 
   div {
     width: 100%;
