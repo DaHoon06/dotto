@@ -1,8 +1,19 @@
+const isProd = process.env.NODE_ENV === 'production';
+const targetApiRouter = isProd ? process.env.NEXT_PUBLIC_PRODUCTION_HOST : process.env.NEXT_PUBLIC_STATGING_HOST;
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   compiler: {
     styledComponents: true,
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: `${isProd} ? ${targetApiRouter} : '/api/:path*'`,
+      }
+    ]
   },
   images: {
     dangerouslyAllowSVG: true,
