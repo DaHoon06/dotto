@@ -11,6 +11,7 @@ interface FlexProps {
   $flexDirection?: CSSProperties["flexDirection"];
   $justifyContent?: CSSProperties["justifyContent"];
   $alignItems?: CSSProperties["alignItems"];
+  $flexWrap?: CSSProperties['flexWrap'],
   $gap?: string | number;
   $width?: string | number;
 }
@@ -26,6 +27,7 @@ const FlexBox = forwardRef(
       $flexDirection = "column",
       $justifyContent = "center",
       $alignItems = "center",
+      $flexWrap = 'wrap',
       $gap = "0",
       $width = "100",
       ...rest
@@ -35,6 +37,7 @@ const FlexBox = forwardRef(
     return (
       <FlexBoxLayout
         ref={forwardRef}
+        $flexWrap={$flexWrap}
         $flexDirection={$flexDirection}
         $justifyContent={$justifyContent}
         $alignItems={$alignItems}

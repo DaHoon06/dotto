@@ -54,7 +54,7 @@ export const ProfileBox = () => {
               }}
             >
               <GoCheckCircle size={20} />
-              <Typography $fontType={"nanumSquare"}>내 예약목록</Typography>
+              <Typography >내 예약목록</Typography>
             </DropDownItem>
             <DropDownItem
               onClick={() => {
@@ -62,7 +62,7 @@ export const ProfileBox = () => {
               }}
             >
               <BiCommentDetail size={20} />
-              <Typography $fontType={"nanumSquare"}>내 댓글 / 리뷰</Typography>
+              <Typography >내 댓글 / 리뷰</Typography>
             </DropDownItem>
             <DropDownItem
               onClick={() => {
@@ -70,7 +70,7 @@ export const ProfileBox = () => {
               }}
             >
               <BsPinAngle size={20} />
-              <Typography $fontType={"nanumSquare"}>찜한 목록</Typography>
+              <Typography >찜한 목록</Typography>
             </DropDownItem>
 
             <hr />
@@ -80,7 +80,7 @@ export const ProfileBox = () => {
                 Toast.success("TOAST");
               }}
             >
-              <Typography $fontType={"nanumSquare"}>보안 / 계정</Typography>
+              <Typography>보안 / 계정</Typography>
             </DropDownItem>
 
             <DropDownItem
@@ -88,7 +88,7 @@ export const ProfileBox = () => {
                 Toast.success("TOAST");
               }}
             >
-              <Typography $fontType={"nanumSquare"}>로그아웃</Typography>
+              <Typography>로그아웃</Typography>
             </DropDownItem>
           </DropDownMenu>
         </DropDown>

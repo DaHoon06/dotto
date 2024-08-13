@@ -1,5 +1,5 @@
 const isProd = process.env.NODE_ENV === 'production';
-const targetApiRouter = isProd ? process.env.NEXT_PUBLIC_PRODUCTION_HOST : process.env.NEXT_PUBLIC_STATGING_HOST;
+const targetApiRouter = isProd ? process.env.NEXT_PUBLIC_PRODUCTION_HOST : process.env.NEXT_PUBLIC_STAGING_HOST;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -7,14 +7,14 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: `${isProd} ? ${targetApiRouter} : '/api/:path*'`,
-      }
-    ]
-  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: '/api/:path*',
+  //       destination: `${isProd} ? ${targetApiRouter} : 'http://localhost:3000/api'`,
+  //     }
+  //   ]
+  // },
   images: {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",

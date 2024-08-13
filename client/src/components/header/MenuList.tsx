@@ -1,5 +1,6 @@
 import {ReactElement} from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 const MenuLayout = styled.nav`
     width: 100%;
@@ -16,8 +17,16 @@ export const MenuList = (): ReactElement => {
   return (
     <MenuLayout>
       <ul>
-        <li>HOME</li>
-        <li>닷투 게시판</li>
+        <li>
+          <Link href={'/'}>
+            HOME
+          </Link>
+        </li>
+        <li>
+          <Link href={'/design'}>
+            닷투 게시판
+          </Link>
+        </li>
         <li>고객지원</li>
       </ul>
     </MenuLayout>

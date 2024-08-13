@@ -1,5 +1,6 @@
 import { Banner } from "@components/banner/Banner";
 import { DottoView } from "@components/dotto/DottoView";
+import {DottoTitle} from "@components/dotto/DottoTitle";
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import { dehydrate } from "@tanstack/react-query";
 import { queryClient } from "@lib/tanstack";
@@ -8,7 +9,9 @@ export default function MainPage() {
   return (
     <>
       <Banner />
-      <DottoView />
+      <DottoView>
+        <DottoTitle />
+      </DottoView>
     </>
   );
 }

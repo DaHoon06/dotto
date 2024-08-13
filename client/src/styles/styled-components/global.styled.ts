@@ -58,6 +58,7 @@ export const GlobalStyle = createGlobalStyle`
     html, body, #__next {
       height: auto;
       min-height: 100vh;
+        background-color: #fff;
 
           &::-webkit-scrollbar {
                 width: 12px;
@@ -156,6 +157,7 @@ export const GlobalStyle = createGlobalStyle`
         background: none;
         border: none;
         outline: none;
+        color: #222;
     }
 
     blockquote:before, blockquote:after,

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const DottoPostCardLayout = styled.article`
   height: 442px;
-  min-width: 288px;
   width: auto;
   border: none;
   overflow: hidden;
@@ -22,6 +21,7 @@ export const DottoPostCardLayout = styled.article`
   .thumbnail_wrapper {
     width: 100%;
     height: 288px;
+      
     img {
       object-fit: cover;
       width: 100%;
@@ -35,7 +35,7 @@ export const DottoPostCardLayout = styled.article`
     padding: 16px 8px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-grow: 1;
 
     .nickname {

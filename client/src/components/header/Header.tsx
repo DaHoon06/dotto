@@ -7,6 +7,7 @@ import { MobileHeader } from "@components/header/MobileHeader";
 import { SearchBar } from "@components/search/SearchBar";
 import FlexBox from "@components/common/boxes/FlexBox";
 import { ProfileBox } from "@components/profile/ProfileBox";
+import Link from "next/link";
 
 const HeaderContainer = styled.div`
   width: 100%;
@@ -28,8 +29,11 @@ export const Header = (): ReactElement => {
           $justifyContent={"flex-start"}
           $alignItems={"flex-start"}
           $flexDirection={"row"}
+          $flexWrap={"nowrap"}
         >
-          <DottoLogo />
+          <Link href={'/'}>
+            <DottoLogo />
+          </Link>
           <SearchBar onAddKeyword={() => {}} />
         </FlexBox>
         <ProfileBox />

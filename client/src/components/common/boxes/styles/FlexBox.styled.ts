@@ -8,5 +8,6 @@ export const FlexBoxLayout = styled.div<FlexBoxProps>`
   flex-direction: ${({ $flexDirection }) => $flexDirection};
   justify-content: ${({ $justifyContent }) => $justifyContent};
   align-items: ${({ $alignItems }) => $alignItems};
+  flex-wrap: ${({ $flexWrap }) => $flexWrap };
   gap: ${({ $gap }) => $gap}px;
 `;
