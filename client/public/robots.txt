@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /post
+
+# Host
+Host: https://www.dotto.com
+
+# Sitemaps
+Sitemap: https://www.dotto.com/sitemap.xml

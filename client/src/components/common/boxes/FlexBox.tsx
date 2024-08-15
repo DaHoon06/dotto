@@ -11,7 +11,7 @@ interface FlexProps {
   $flexDirection?: CSSProperties["flexDirection"];
   $justifyContent?: CSSProperties["justifyContent"];
   $alignItems?: CSSProperties["alignItems"];
-  $flexWrap?: CSSProperties['flexWrap'],
+  $flexWrap?: CSSProperties["flexWrap"];
   $gap?: string | number;
   $width?: string | number;
 }
@@ -27,12 +27,12 @@ const FlexBox = forwardRef(
       $flexDirection = "column",
       $justifyContent = "center",
       $alignItems = "center",
-      $flexWrap = 'wrap',
+      $flexWrap = "wrap",
       $gap = "0",
       $width = "100",
       ...rest
     }: PropsWithChildren<FlexBoxProps>,
-    forwardRef: Ref<HTMLDivElement>,
+    forwardRef: Ref<HTMLDivElement>
   ) => {
     return (
       <FlexBoxLayout
@@ -48,7 +48,9 @@ const FlexBox = forwardRef(
         {children}
       </FlexBoxLayout>
     );
-  },
+  }
 );
 
+
 export default FlexBox;
+FlexBox.displayName = "FlexBox";

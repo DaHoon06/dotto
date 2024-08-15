@@ -36,11 +36,7 @@ export const SlideModal = (props: SlideModalProps): ReactElement => {
               exit={{ opacity: 0, x: "100%" }}
               transition={{ stiffness: 300 }}
             >
-              <S.ModalBody
-                ref={ele}
-                $showClose={showClose}
-                $maxWidth={maxWidth}
-              >
+              <S.ModalBody ref={ele}>
                 {!!showClose && (
                   <S.ModalCloseButtonWrapper>
                     <button

@@ -24,15 +24,7 @@ const element: { [key in Style.Variant]: string } = {
 };
 
 const StyledComponent = (element: any) => styled(element)<TypographyProps>`
-  font-family: ${(props) =>
-      props.$fontType === "nanumSquare"
-        ? "NanumSquare"
-        : props.$fontType === "montserrat"
-        ? "Montserrat"
-          ? props.$fontType === "nanumGothic"
-          : "Nanum Gothic"
-        : "Pretendard"},
-    sans-serif;
+  font-family: "Pretendard", sans-serif;
   line-height: ${(props) => props.$lineHeight || 20}px;
   transition: color 0.2s ease-in;
   letter-spacing: ${(props) => props.$letterSpacing || "-0.5"}px;

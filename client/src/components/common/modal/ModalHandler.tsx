@@ -9,18 +9,22 @@ import {
 import useModal from "./hooks/useModal";
 import ReactDOM from "react-dom";
 import useModalStore, { ModalType } from "./store/modalStore";
-import {FadeModal} from "./FadeModal";
-import {SlideModal} from "@components/common/modal/SlideModal";
+import { FadeModal } from "./FadeModal";
+import { SlideModal } from "@components/common/modal/SlideModal";
 
 export enum ModalAnimation {
-  FADE = 'fade',
-  SLIDE = 'slide'
+  FADE = "fade",
+  SLIDE = "slide",
 }
 
 interface ModalHandlerProps extends PropsWithChildren {
   outerClick?: boolean;
   modalType: ModalType;
   animation?: ModalAnimation;
+}
+
+interface ModalAnimationTypeProps {
+  children: ReactNode;
 }
 
 export const ModalHandler = (props: ModalHandlerProps) => {
@@ -44,14 +48,14 @@ export const ModalHandler = (props: ModalHandlerProps) => {
 
   const modalHandler = useCallback(
     (children: ReactNode): ReactElement => {
-      return (
-        <ModalAnimationType children={children} />
-      );
+      return <ModalAnimationType>{children}</ModalAnimationType>;
     },
-    [type, outerClick],
+    [type, outerClick]
   );
 
-  const ModalAnimationType = ({children}: ReactNode): ReactElement => {
+  const ModalAnimationType = ({
+    children,
+  }: ModalAnimationTypeProps): ReactElement => {
     switch (animation) {
       case ModalAnimation.SLIDE:
         return (
@@ -64,7 +68,7 @@ export const ModalHandler = (props: ModalHandlerProps) => {
           >
             {children}
           </SlideModal>
-        )
+        );
       default:
         return (
           <FadeModal
@@ -76,9 +80,9 @@ export const ModalHandler = (props: ModalHandlerProps) => {
           >
             {children}
           </FadeModal>
-        )
+        );
     }
-  }
+  };
 
   if (!element) return <></>;
   else return <>{ReactDOM.createPortal(modalHandler(children), element)}</>;

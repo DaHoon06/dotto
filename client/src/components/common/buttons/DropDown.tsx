@@ -14,7 +14,7 @@ type DropDownType = "icon" | "button";
 type Variant = "black" | "default" | "icon";
 type Direction = "left" | "right";
 
-interface DropDownProps {
+interface DropDownStyleProps {
   $width?: string | number;
   $height?: string | number;
   $direction?: Direction;
@@ -22,14 +22,14 @@ interface DropDownProps {
 }
 
 // 버튼 스타일
-export const DropDownButton = styled.button<DropDownProps>``;
+export const DropDownButton = styled.button<DropDownStyleProps>``;
 // 메뉴 박스
 export const DropDownMenu = styled.ul``;
 // 드랍다운 아이템 스타일
 export const DropDownItem = styled.li``;
 
 // 스타일 구성
-export const DropDownLayout = styled.div<DropDownProps>`
+export const DropDownLayout = styled.div<DropDownStyleProps>`
   position: relative;
   width: ${({ $width, $type }) =>
     $type === "button" ? ($width ? `${$width}px` : "169px") : "fit-content"};

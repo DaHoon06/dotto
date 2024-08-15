@@ -13,10 +13,8 @@ export default function handler(
 ) {
   const method = req.method;
   if (method === "GET") {
-    const { page = 1 } = req.query;
-    const pageNumber = Array.isArray(page)
-      ? parseInt(page[0], 10)
-      : parseInt(page, 10);
+    const { page = 1 } = req.query as { page: string };
+    const pageNumber = Number(page);
     const itemsPerPage = 16;
 
     const startIndex = (pageNumber - 1) * itemsPerPage;

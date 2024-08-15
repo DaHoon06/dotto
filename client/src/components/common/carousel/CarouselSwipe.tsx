@@ -5,7 +5,6 @@ import "swiper/scss/pagination";
 import { CarouselSwipeLayout } from "./styles/CarouselSwipe.styled";
 import Image from "next/legacy/image";
 import { useState } from "react";
-import { SwiperProps } from "swiper/swiper-react";
 
 interface CarouselItems {
   name: string;
@@ -14,7 +13,7 @@ interface CarouselItems {
 
 interface Props {
   items: CarouselItems[];
-  options?: SwiperProps;
+  options?: any;
 }
 
 export const CarouselSwipe = (props: Props) => {

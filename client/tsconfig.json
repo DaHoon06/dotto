@@ -13,6 +13,8 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": "./src",
+    "typeRoots": ["node_modules/@types"],
+    "types": ["jest", "node"],
     "paths": {
       "@components/*": ["./components/*"],
       "@layouts/*": ["./layouts/*"],
