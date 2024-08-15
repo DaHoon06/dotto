@@ -1,4 +1,4 @@
-import { SortGroup } from "@components/dotto/SortGroup";
+import { SortGroup } from "@components/dotto/filter/SortGroup";
 import { FilterIcon } from "@components/common/icons";
 import { Typography } from "@components/common/typograhpy";
 import * as S from "./styles/MobileOptionGroup.styled";

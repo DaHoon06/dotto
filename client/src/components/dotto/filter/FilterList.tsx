@@ -1,8 +1,9 @@
-import styled from "styled-components";
 import { FlexBox } from "@components/common/boxes";
 import { Typography } from "@components/common/typograhpy";
 import { AnimatePresence, motion } from "framer-motion";
 import * as S from "./styles/FilterList.styled";
+import { FilterButtonGroup } from "./FilterButtonGroup";
+import { TagGroup } from "./TagGroup";
 
 const TAGS = [
   "블랙앤그레이",
@@ -40,24 +41,7 @@ export const FilterList = ({ isOpen }: FilterListProps) => {
                 $justifyContent={"flex-start"}
                 $alignItems={"flex-start"}
               >
-                <S.TagContainer>
-                  <Typography variant={"h3"}># 태그</Typography>
-
-                  <FlexBox
-                    className={"mt-24"}
-                    $flexDirection={"row"}
-                    $justifyContent={"flex-start"}
-                    $gap={8}
-                  >
-                    {TAGS.map((tag, index) => {
-                      return (
-                        <div className={"tag"} key={`tag_${tag}_${index}`}>
-                          {tag}
-                        </div>
-                      );
-                    })}
-                  </FlexBox>
-                </S.TagContainer>
+                <TagGroup tags={TAGS} />
 
                 <hr />
 
@@ -73,10 +57,7 @@ export const FilterList = ({ isOpen }: FilterListProps) => {
                   </div>
                 </S.SearchContainer>
 
-                <div>
-                  <button>초기화</button>
-                  <button>검색하기</button>
-                </div>
+                <FilterButtonGroup />
               </FlexBox>
             </S.FilterListContainer>
           </motion.div>

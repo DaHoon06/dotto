@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { IoIosArrowDown } from "react-icons/io";
 import { ChangeEvent, useState } from "react";
 import {
   SelectBox,
@@ -26,10 +25,6 @@ export const SortGroup = () => {
 
   return (
     <SortGroupLayout>
-      {/* <select value={sort} onChange={handleChangeSortSelect}>
-        <option value={"최신순"}>최신순</option>
-        <option value={"오래된순"}>오래된순</option>
-      </select> */}
       <SelectBox options={SORT} />
     </SortGroupLayout>
   );

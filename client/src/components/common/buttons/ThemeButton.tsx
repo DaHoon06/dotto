@@ -3,7 +3,12 @@ import { CSSProperties, ComponentProps, ReactElement } from "react";
 import { Button } from "./styles/ThemeButton.styled";
 
 export type ButtonType = "button" | "submit" | "reset";
-export type ButtonVariant = "black" | "gray" | "navy" | "icon";
+export type ButtonVariant =
+  | "black000"
+  | "gray000"
+  | "white000"
+  | "white100"
+  | "icon";
 
 interface ThemeButtonProps extends ComponentProps<"button"> {
   variant?: ButtonVariant;

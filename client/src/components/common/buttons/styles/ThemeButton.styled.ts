@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Button = styled.button`
   max-width: 200px;
   max-height: 44px;
-  padding: 12px 24px;
   border-radius: 4px;
   border: 1px solid transparent;
   transition: all 0.3s ease;
@@ -25,7 +24,7 @@ export const Button = styled.button`
     }
   }
 
-  &.black {
+  &.black000 {
     background-color: ${({ theme }) => theme.colors.button.black000};
 
     span {
@@ -33,7 +32,7 @@ export const Button = styled.button`
     }
   }
 
-  &.gray {
+  &.gray000 {
     background-color: ${({ theme }) => theme.colors.button.gray000};
 
     span {
@@ -41,11 +40,19 @@ export const Button = styled.button`
     }
   }
 
-  &.navy {
-    background-color: ${({ theme }) => theme.colors.button.navy000};
+  &.white000 {
+    background-color: ${({ theme }) => theme.colors.button.white000};
 
     span {
-      color: #fff;
+      color: #222;
+    }
+  }
+
+  &.white100 {
+    background-color: ${({ theme }) => theme.colors.button.white100};
+    border-color: #bdbdbd;
+    span {
+      color: #222;
     }
   }
 

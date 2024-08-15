@@ -191,6 +191,13 @@ export const GlobalStyle = createGlobalStyle`
       --white150: #f8f8f8;
       --black000: #000;
       --black050: #222;
+
+       // 버튼 색상
+      --buttonNavy000: #fff;
+      --buttonBlack000: #222222;
+      --buttonGray000: rgba(2,2,2, 0.8);
+      --buttonWhite000: #fff;
+      --buttonWhite100: #F5F5F5;
       
       /**===============
         * 텍스트 색상
@@ -223,6 +230,13 @@ export const GlobalStyle = createGlobalStyle`
       --white150: #f8f8f8;
       --black000: #000;
       --black050: #222;
+
+          // 버튼 색상
+      --buttonNavy000: #fff;
+      --buttonBlack000: #222222;
+      --buttonGray000: rgba(2,2,2, 0.8);
+      --buttonWhite000: #fff;
+      --buttonWhite100: #F5F5F5;
 
       /**===============
         * 텍스트 색상
@@ -259,6 +273,8 @@ export const GlobalStyle = createGlobalStyle`
       --buttonNavy000: #fff;
       --buttonBlack000: #222222;
       --buttonGray000: rgba(2,2,2, 0.8);
+      --buttonWhite000: #fff;
+      --buttonWhite100: #F5F5F5;
 
       /**===============
         * 텍스트 색상

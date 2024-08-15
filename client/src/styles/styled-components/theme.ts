@@ -1,9 +1,10 @@
 import { DefaultTheme } from "styled-components";
 
 export const button = {
-  navy000: "var(--buttonNavy000)",
   black000: "var(--buttonBlack000)",
   gray000: "var(--buttonGray000)",
+  white000: "var(--buttonwhite000)",
+  white100: "var(--buttonWhite100)",
 };
 
 export const colors = {

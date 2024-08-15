@@ -7,6 +7,7 @@ import {
 import { FloatingButton } from "./FloatingButton";
 import { Pagination } from "@components/common/buttons/Pagination";
 import { HamburgerButton } from "@components/common/buttons/HamburgerButton";
+import { ThemeButton } from "./ThemeButton";
 
 export {
   DropDown,
@@ -16,4 +17,5 @@ export {
   FloatingButton,
   Pagination,
   HamburgerButton,
+  ThemeButton,
 };

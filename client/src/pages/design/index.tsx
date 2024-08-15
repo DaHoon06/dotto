@@ -1,9 +1,9 @@
 import { DottoView } from "@components/dotto/DottoView";
-import { OptionGroup } from "@components/dotto/OptionGroup";
-import { MobileOptionGroup } from "@components/dotto/MobileOptionGroup";
-import { FilterList } from "@components/dotto/FilterList";
+import { FilterList } from "@components/dotto/filter/FilterList";
 import styled from "styled-components";
 import { useState } from "react";
+import { OptionGroup } from "@components/dotto/filter/OptionGroup";
+import { MobileOptionGroup } from "@components/dotto/filter/MobileOptionGroup";
 
 export const DesignPageLayout = styled.div`
   display: flex;
@@ -23,7 +23,7 @@ const DesignPage = () => {
       <div>
         <OptionGroup onClickFilter={() => setIsOpen(!isOpen)} />
         <MobileOptionGroup />
-        <DottoView></DottoView>
+        <DottoView />
       </div>
     </DesignPageLayout>
   );
