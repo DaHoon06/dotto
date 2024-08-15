@@ -1,12 +1,21 @@
 import { DefaultTheme } from "styled-components";
 
+export const button = {
+  navy000: "var(--buttonNavy000)",
+  black000: "var(--buttonBlack000)",
+  gray000: "var(--buttonGray000)",
+};
+
 export const colors = {
+  button,
   white000: "var(--white000)",
   white100: "var(--white100)",
   white150: "var(--white150)",
   black000: "var(--black000)",
   black050: "var(--black050)",
 };
+
+
 
 export const zIndex = {
   DRAWER: 500,

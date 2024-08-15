@@ -255,6 +255,11 @@ export const GlobalStyle = createGlobalStyle`
       --black000: #000;
       --black050: #222;
 
+      // 버튼 색상
+      --buttonNavy000: #fff;
+      --buttonBlack000: #222222;
+      --buttonGray000: rgba(2,2,2, 0.8);
+
       /**===============
         * 텍스트 색상
       =================**/
