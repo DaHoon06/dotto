@@ -30,7 +30,7 @@ export const MetaHead = (): ReactElement => {
 
       {/*<meta property="og:url" content="https://unisurvey.co.kr" />*/}
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="유니서베이" />
+      <meta property="og:title" content="닷투 | Dotto." />
       <meta property="og:description" content="타투 플랫폼 - 닷투 Dotto." />
       <meta name="color-scheme" content="dark light" />
       <meta
