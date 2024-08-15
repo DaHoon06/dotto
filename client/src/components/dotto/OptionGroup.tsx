@@ -1,37 +1,37 @@
-import styled from "styled-components";
-import {SortGroup} from "@components/dotto/SortGroup";
-import {FilterIcon} from "@components/common/icons";
+import { SortGroup } from "@components/dotto/SortGroup";
+import { FilterIcon } from "@components/common/icons";
+import { Typography } from "@components/common/typograhpy";
+import { ReactElement } from "react";
+import * as S from "./styles/OptionGroup.styled";
 
-const OptionGroupLayout = styled.div`
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    background-color: ${({theme}) => theme.colors.white000};
-    display: flex;
-    justify-content: flex-end;
-    gap: 32px;
-    padding: 1em;
-    
-    
-    .filter {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    ${({theme}) => theme.media.mobile} {
-        display: none;
-    }
-`;
-
-export const OptionGroup = () => {
-  return (
-    <OptionGroupLayout >
-      <SortGroup />
-      <div className={'filter'}>
-        FILTER
-        <FilterIcon />
-      </div>
-    </OptionGroupLayout>
-  )
+interface OptionGroupProps {
+  onClickFilter: () => void;
 }
+
+export const OptionGroup = ({
+  onClickFilter,
+}: OptionGroupProps): ReactElement => {
+  return (
+    <S.OptionGroupLayout>
+      <SortGroup />
+      <FilterButton onClickFilter={onClickFilter} />
+    </S.OptionGroupLayout>
+  );
+};
+
+export const FilterButton = ({
+  onClickFilter,
+}: OptionGroupProps): ReactElement => {
+  return (
+    <S.FilterButtonLayout
+      type="button"
+      className="filter"
+      onClick={onClickFilter}
+    >
+      <Typography $fontWeight={600} $fontSize={14}>
+        FILTER
+      </Typography>
+      <FilterIcon />
+    </S.FilterButtonLayout>
+  );
+};
