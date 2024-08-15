@@ -17,6 +17,8 @@
       "@components/*": ["./components/*"],
       "@layouts/*": ["./layouts/*"],
       "@pages/*": ["./pages/*"],
+      "@services/*": ["./services/*"],
+      "@mock/*": ["./mock/*"],
       "@interfaces/*": ["./interfaces/*"],
       "@styles/*": ["./styles/*"],
       "@lib/*": ["./lib/*"],

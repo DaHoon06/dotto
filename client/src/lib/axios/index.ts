@@ -13,13 +13,13 @@ const BaseUrl = isProd
 const headers = {
   "Content-Type": "application/json",
 };
-
+//baseURL: `${targetServer}${basePath}`,
 const createAxiosInstance = (
   basePath: string,
   targetServer: string
 ): AxiosInstance => {
   const instance: AxiosInstance = axios.create({
-    baseURL: `${targetServer}${basePath}`,
+    baseURL: `${basePath}`,
     headers,
     timeout: 20000,
     withCredentials: true,
