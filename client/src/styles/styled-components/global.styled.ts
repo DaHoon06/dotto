@@ -185,14 +185,35 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     :root {
+      // 색상
       --white000: #fff;
       --white100: #fbfbfb;
       --white150: #f8f8f8;
       --black000: #000;
       --black050: #222;
       
+      /**===============
+        * 텍스트 색상
+      =================**/
       --textDefault: #222;
-      --textWhite: #fff;
+      // white
+      --textWhite000: #fff;
+
+      // black
+      --textBlack000: #000;
+      --textBlack100: #181818;
+      --textBlack200: #222;
+
+      // gray
+      --textGray000: #919191;
+      --textGray100: #AEAEB2; 
+      --textGray200: #C7C7CC;
+      --textGray300: #D1D1D6;
+      --textGray400: #E5E5EA;
+      --textGray500: #F2F2F7;
+
+      // red
+      --textRed000: #FF533B;
     }
 
 
@@ -202,6 +223,29 @@ export const GlobalStyle = createGlobalStyle`
       --white150: #f8f8f8;
       --black000: #000;
       --black050: #222;
+
+      /**===============
+        * 텍스트 색상
+      =================**/
+      --textDefault: #222;
+      // white
+      --textWhite000: #fff;
+
+      // black
+      --textBlack000: #000;
+      --textBlack100: #181818;
+      --textBlack200: #222;
+
+      // gray
+      --textGray000: #919191;
+      --textGray100: #AEAEB2; 
+      --textGray200: #C7C7CC;
+      --textGray300: #D1D1D6;
+      --textGray400: #E5E5EA;
+      --textGray500: #F2F2F7;
+
+      // red
+      --textRed000: #FF533B;
     }
 
     body[data-theme="dark"] {
@@ -210,5 +254,28 @@ export const GlobalStyle = createGlobalStyle`
       --white150: #f8f8f8;
       --black000: #000;
       --black050: #222;
+
+      /**===============
+        * 텍스트 색상
+      =================**/
+      --textDefault: #222;
+      // white
+      --textWhite000: #fff;
+
+      // black
+      --textBlack000: #000;
+      --textBlack100: #181818;
+      --textBlack200: #222;
+
+      // gray
+      --textGray000: #919191;
+      --textGray100: #AEAEB2; 
+      --textGray200: #C7C7CC;
+      --textGray300: #D1D1D6;
+      --textGray400: #E5E5EA;
+      --textGray500: #F2F2F7;
+
+      // red
+      --textRed000: #FF533B;
     }
 `;
