@@ -22,8 +22,10 @@ interface dottoPostListProps {
 /**
  * @description
  */
-export const dottoPostListApi = async (page: number): Promise<DottoPostListState[]> => {
-  const url = `/dotto/posts`;
-  const {} = await axiosInstance.get(url);
-  return [];
+export const dottoPostListApi = async (
+  page: number
+): Promise<DottoPostListState[]> => {
+  const url = `/dotto/posts?page=${page}`;
+  const { data } = await axiosInstance.get(url);
+  return data.data;
 };

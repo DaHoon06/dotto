@@ -1,3 +1,4 @@
 export const dottoQueryKeys = {
-  recentPosts: 'recent_posts_query_key'
-}
+  postsLists: "posts_lists_query_key",
+  recentPosts: "recent_posts_query_key",
+};

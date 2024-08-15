@@ -4,18 +4,20 @@ import { DottoTitle } from "@components/dotto/DottoTitle";
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import { dehydrate } from "@tanstack/react-query";
 import { queryClient } from "@lib/tanstack";
-import { useEffect } from "react";
 import { dottoRecentPostsListAPi } from "@services/api/dotto.api";
 import { dottoQueryKeys } from "@services/queries/keys";
+import { useRecentPostsQuery } from "@services/queries/hooks/dotto/postQuery";
 
 export default function MainPage() {
-  useEffect(() => {
-    dottoRecentPostsListAPi();
-  }, []);
+  const recentPostQuery = useRecentPostsQuery();
+
   return (
     <>
       <Banner />
-      <DottoView>
+      <DottoView
+        posts={recentPostQuery?.data || []}
+        isLoading={recentPostQuery.isLoading || false}
+      >
         <DottoTitle />
       </DottoView>
     </>

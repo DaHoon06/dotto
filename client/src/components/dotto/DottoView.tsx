@@ -1,23 +1,23 @@
 import { ReactElement, ReactNode } from "react";
 import * as S from "./styles/DottoView.styled";
 import { DottoPostList } from "@components/dotto/DottoPostList";
-import { useRecentPostsQuery } from "@services/queries/hooks/dotto/postQuery";
+import { DottoPostListState } from "@interfaces/dotto/postList";
 
 interface DottoViewProps {
   children?: ReactNode;
+  posts: DottoPostListState[];
+  isLoading?: boolean;
 }
 
-export const DottoView = ({ children }: DottoViewProps): ReactElement => {
-  const recentPostQuery = useRecentPostsQuery();
-
+export const DottoView = ({
+  children,
+  posts,
+  isLoading,
+}: DottoViewProps): ReactElement => {
   return (
     <S.DottoViewLayout>
       {children}
-      {recentPostQuery.isLoading && <div>TEEST</div>}
-      <DottoPostList
-        posts={recentPostQuery?.data || []}
-        isLoading={recentPostQuery.isLoading || false}
-      />
+      <DottoPostList posts={posts || []} isLoading={isLoading || false} />
     </S.DottoViewLayout>
   );
 };

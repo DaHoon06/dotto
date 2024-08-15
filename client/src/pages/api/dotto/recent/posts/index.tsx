@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { DottoPostListState } from "@interfaces/dotto/postList";
 import { postListMockData } from "mock/dotto/postMockData";
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -15,7 +14,6 @@ export default function handler(
   const method = req.method;
 
   if (method === "GET") {
-    const mockData = postListMockData;
     const slicedData = postListMockData.slice(0, 16);
     return res.status(200).json({ message: "Success", data: slicedData });
   }

@@ -19,6 +19,7 @@
       "@pages/*": ["./pages/*"],
       "@services/*": ["./services/*"],
       "@mock/*": ["./mock/*"],
+      "@hooks/*": ["./hooks/*"],
       "@interfaces/*": ["./interfaces/*"],
       "@styles/*": ["./styles/*"],
       "@lib/*": ["./lib/*"],
