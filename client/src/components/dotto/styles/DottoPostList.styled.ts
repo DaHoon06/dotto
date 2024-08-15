@@ -13,8 +13,7 @@ export const DottoPostListLayout = styled.div`
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  @media (max-width: 500px) {
-    /* 모바일에서는 1열 */
+  /* @media (max-width: 500px) {
     grid-template-columns: 1fr;
-  }
+  } */
 `;

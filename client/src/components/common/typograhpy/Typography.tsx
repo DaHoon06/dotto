@@ -37,7 +37,7 @@ const StyledComponent = (element: any) => styled(element)<TypographyProps>`
   transition: color 0.2s ease-in;
   letter-spacing: ${(props) => props.$letterSpacing || "-0.5"}px;
   color: ${(props) => Style.FontColor[props.$fontColor || "default"]};
-  font-size: ${(props) => props.$fontSize || 16}px;
+  font-size: min(4vw, ${(props) => props.$fontSize || 16}px);
   font-weight: ${(props) => props.$fontWeight || 400};
 `;
 

@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { PropsWithChildren } from "react";
 
 const Footer = styled.footer`
-  height: 100px;
+  min-height: 380px;
+  height: auto;
   border: none;
   background-color: ${({ theme }) => theme.colors.black000};
 `;

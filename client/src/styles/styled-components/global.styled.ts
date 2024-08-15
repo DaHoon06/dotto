@@ -92,7 +92,8 @@ export const GlobalStyle = createGlobalStyle`
       padding: 0;
       box-sizing: border-box;
     }
-    
+    #modal {z-index: 9999;}
+
     #__next {
       min-height: 100%;
       display: flex;
@@ -204,7 +205,7 @@ export const GlobalStyle = createGlobalStyle`
       =================**/
       --textDefault: #222;
       // white
-      --textWhite000: #fff;
+      --textWhite000: #f5f5f5;
 
       // black
       --textBlack000: #000;
@@ -243,7 +244,7 @@ export const GlobalStyle = createGlobalStyle`
       =================**/
       --textDefault: #222;
       // white
-      --textWhite000: #fff;
+      --textWhite000: #f5f5f5;
 
       // black
       --textBlack000: #000;
@@ -281,7 +282,7 @@ export const GlobalStyle = createGlobalStyle`
       =================**/
       --textDefault: #222;
       // white
-      --textWhite000: #fff;
+      --textWhite000: #f5f5f5;
 
       // black
       --textBlack000: #000;
