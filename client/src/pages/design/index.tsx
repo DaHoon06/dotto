@@ -11,6 +11,7 @@ import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import { dottoPostListApi } from "@services/api/dotto.api";
 import { dottoQueryKeys } from "@services/queries/keys";
 import { dehydrate } from "@tanstack/react-query";
+import { SpinnerBox } from "@components/common/spinner/SpinnerBox";
 
 export const DesignPageLayout = styled.div`
   display: flex;
@@ -20,7 +21,7 @@ export const DesignPageLayout = styled.div`
   max-width: 1200px;
   min-height: 100vh;
   height: 100%;
-
+  padding-bottom: 1em;
   margin: 0 auto;
 
   .list_container {
@@ -57,7 +58,7 @@ const DesignPage = () => {
           );
         })}
 
-        {isFetchingNextPage ? <div /> : <div ref={setTarget} />}
+        {isFetchingNextPage ? <SpinnerBox /> : <div ref={setTarget} />}
       </div>
     </DesignPageLayout>
   );
