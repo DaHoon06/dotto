@@ -17,8 +17,15 @@ export const DesignPageLayout = styled.div`
   align-items: flex-start;
   justify-content: center;
   width: 100%;
+  max-width: 1200px;
   min-height: 100vh;
   height: 100%;
+
+  margin: 0 auto;
+
+  .list_container {
+    width: 100%;
+  }
 `;
 
 const DesignPage = () => {
@@ -39,7 +46,7 @@ const DesignPage = () => {
   return (
     <DesignPageLayout>
       <FilterList isOpen={isOpen} />
-      <div>
+      <div className={"list_container"}>
         <OptionGroup onClickFilter={() => setIsOpen(!isOpen)} />
         <MobileOptionGroup />
         {listQueryData?.pages.map((page, index) => {

@@ -9,7 +9,6 @@ export const MobileOptionGroupLayout = styled.div`
   top: 100px; // header 높이
   z-index: 99;
   background-color: ${({ theme }) => theme.colors.white000};
-  gap: 32px;
   padding: 1em;
 
   ${({ theme }) => theme.media.mobile} {

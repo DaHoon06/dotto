@@ -1,9 +1,15 @@
 import styled from "styled-components";
-import { ChangeEvent, useState } from "react";
-import {
-  SelectBox,
-  SelectOptions,
-} from "@components/common/select-box/SelectBox";
+import React, { useState } from "react";
+import { SelectOptions } from "@components/common/select-box/SelectBox";
+import dynamic from "next/dynamic";
+
+const SelectBox = dynamic(
+  () =>
+    import("../../common/select-box/SelectBox").then((mod) => mod.SelectBox),
+  {
+    ssr: false,
+  }
+);
 
 const SortGroupLayout = styled.div`
   display: flex;
@@ -17,15 +23,19 @@ const SORT: SelectOptions[] = [
 ];
 
 export const SortGroup = () => {
-  const [sort, setSort] = useState("최신순");
+  const [sort, setSort] = useState<SelectOptions>(SORT[0]);
 
-  const handleChangeSortSelect = (e: ChangeEvent<HTMLSelectElement>): void => {
-    setSort(e.target.value);
+  const handleChangeSortSelect = (e: SelectOptions): void => {
+    setSort(e);
   };
 
   return (
     <SortGroupLayout>
-      <SelectBox options={SORT} />
+      <SelectBox
+        options={SORT}
+        onChange={handleChangeSortSelect}
+        value={sort}
+      />
     </SortGroupLayout>
   );
 };
