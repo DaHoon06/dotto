@@ -53,21 +53,21 @@ export const DottoPostCard = ({ post }: DottoPostCardProps): ReactElement => {
         <Typography className={"nickname"}>{nickname}</Typography>
         <Typography className={"title"}>{title}</Typography>
 
-        <FlexBox $flexDirection={"row"} $justifyContent={"flex-start"}>
+        <FlexBox $flexDirection={"row"} $justifyContent={"flex-start"} $gap={8}>
           {post?.eventPrice && (
             <Typography className={"eventPrice"}>
-              {priceConvert(post.eventPrice)} 원
+              {priceConvert(post.eventPrice)}
             </Typography>
           )}
           <Typography className={"originPrice"}>
-            {priceConvert(originPrice)} 원
+            {priceConvert(originPrice)}
           </Typography>
           {post?.salePercent && (
             <Typography className={"percent"}>{post.salePercent} %</Typography>
           )}
         </FlexBox>
 
-        <FlexBox $flexDirection={"row"} $justifyContent={"flex-start"}>
+        <FlexBox $flexDirection={"row"} $justifyContent={"flex-start"} $gap={4}>
           {tags.length > 0 &&
             tags.map((tag, index) => (
               <span className={"tag"} key={`${tag}_hash_tag_${index}`}>

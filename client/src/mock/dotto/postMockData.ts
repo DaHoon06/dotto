@@ -4,7 +4,8 @@ export const postListMockData: DottoPostListState[] = [
   {
     postId: "850a",
     thumbnails: [],
-    title: "반짝이와 패턴 (도안 수정 가능)",
+    title:
+      "반짝이와 패턴 (도안 수정 가능)반짝이와 패턴 (도안 수정 가능)반짝이와 패턴 (도안 수정 가능)반짝이와 패턴 (도안 수정 가능)반짝이와 패턴 (도안 수정 가능)반짝이와 패턴 (도안 수정 가능)",
     nickname: "닷투",
     originPrice: 100000,
     salePercent: 30,

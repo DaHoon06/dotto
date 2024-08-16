@@ -5,6 +5,7 @@ export const DottoPostCardLayout = styled.article`
   width: auto;
   border: none;
   overflow: hidden;
+  padding-bottom: 0.4em;
   position: relative;
   border-radius: 4px;
   background-color: #fff;
@@ -21,7 +22,7 @@ export const DottoPostCardLayout = styled.article`
   .thumbnail_wrapper {
     width: 100%;
     height: 288px;
-      
+
     img {
       object-fit: cover;
       width: 100%;
@@ -37,6 +38,7 @@ export const DottoPostCardLayout = styled.article`
     flex-direction: column;
     justify-content: space-evenly;
     flex-grow: 1;
+    gap: 4px;
 
     .nickname {
       font-size: 14px;
@@ -47,6 +49,12 @@ export const DottoPostCardLayout = styled.article`
       font-weight: 700;
       font-size: 16px;
       color: #222;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-clamp: 2;
+      -webkit-line-clamp: 2;
     }
 
     .originPrice {
@@ -68,10 +76,6 @@ export const DottoPostCardLayout = styled.article`
   div {
     display: flex;
     align-items: center;
-
-    & > *:not(:last-child) {
-      margin-right: 8px;
-    }
   }
 
   span.tag {
