@@ -38,6 +38,15 @@ const NaivationSection = styled.section`
     }
   }
 
+  ${({ theme }) => theme.media.mobile} {
+    padding-top: 0px;
+    min-height: 300px;
+
+    .menu-navigation {
+      display: none;
+    }
+  }
+
   .information {
     display: flex;
     flex-direction: column;

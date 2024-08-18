@@ -23,23 +23,25 @@ const HeaderContainer = styled.div`
 
 export const Header = (): ReactElement => {
   return (
-    <HeaderLayout>
-      <HeaderContainer>
-        <FlexBox
-          $justifyContent={"flex-start"}
-          $alignItems={"flex-start"}
-          $flexDirection={"row"}
-          $flexWrap={"nowrap"}
-        >
-          <Link href={'/'}>
-            <DottoLogo />
-          </Link>
-          <SearchBar onAddKeyword={() => {}} />
-        </FlexBox>
-        <ProfileBox />
-        <MenuList />
-      </HeaderContainer>
-      <MobileHeader />
-    </HeaderLayout>
+    <>
+      <HeaderLayout>
+        <HeaderContainer>
+          <FlexBox
+            $justifyContent={"flex-start"}
+            $alignItems={"flex-start"}
+            $flexDirection={"row"}
+            $flexWrap={"nowrap"}
+          >
+            <Link href={"/"}>
+              <DottoLogo />
+            </Link>
+            <SearchBar onAddKeyword={() => {}} />
+          </FlexBox>
+          <ProfileBox />
+          <MenuList />
+        </HeaderContainer>
+        <MobileHeader />
+      </HeaderLayout>
+    </>
   );
 };

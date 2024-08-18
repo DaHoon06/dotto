@@ -7,18 +7,18 @@ const Header = styled.header`
   display: flex;
   align-items: center;
   padding: 28px 56px;
-  //box-shadow: 0 10px 10px rgb(50 50 50 / 12%);
   border-bottom: 1px solid #ededed;
 
   ${({ theme }) => theme.media.tablet} {
   }
 
   ${({ theme }) => theme.media.mobile} {
-    height: 100px;
+    height: auto;
     padding: 20px;
     position: sticky;
     top: 0;
     z-index: 99;
+    padding: 4px 20px;
   }
 `;
 

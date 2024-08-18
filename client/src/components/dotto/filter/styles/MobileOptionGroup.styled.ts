@@ -6,7 +6,7 @@ export const MobileOptionGroupLayout = styled.div`
   max-width: 1200px;
   margin: auto;
   position: sticky;
-  top: 100px; // header 높이
+  top: 69px; // header 높이
   z-index: 99;
   background-color: ${({ theme }) => theme.colors.white000};
   padding: 1em;

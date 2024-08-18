@@ -5,32 +5,39 @@ import {
   ModalAnimation,
   ModalHandler,
 } from "@components/common/modal/ModalHandler";
-import { ReactElement } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import useModalStore, {
   ModalType,
 } from "@components/common/modal/store/modalStore";
 import { IoSearchSharp } from "react-icons/io5";
 import FlexBox from "@components/common/boxes/FlexBox";
-
-const MobileHeaderLayout = styled.div`
-  display: none;
-  width: 100%;
-
-  @media screen and (max-width: 767px) {
-    display: flex;
-    justify-content: space-between;
-  }
-`;
+import { MobileHeaderLayout } from "./styles/MobileHeader.styled";
 
 export const MobileHeader = (): ReactElement => {
   const { setIsOpen, setModalType } = useModalStore();
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
   const handleClickSideMenu = (): void => {
     setIsOpen(true);
     setModalType(ModalType.SIDE_MENU);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <MobileHeaderLayout>
+    <MobileHeaderLayout >
       <DottoLogo />
       <FlexBox $flexDirection={"row"} $gap={10} $justifyContent={"flex-end"}>
         <button type={"button"}>
