@@ -13,8 +13,9 @@ import { IoSearchSharp } from "react-icons/io5";
 import FlexBox from "@components/common/boxes/FlexBox";
 
 const MobileHeaderLayout = styled.div`
-  display: none;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 
   @media screen and (max-width: 767px) {
     display: flex;

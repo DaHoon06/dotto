@@ -1,8 +1,9 @@
-import { Fragment, ReactElement } from "react";
+import { ReactElement } from "react";
 import * as S from "./styles/DottoPostList.styled";
 import { DottoPostCard } from "@components/dotto/DottoPostCard";
 import { DottoPostListState } from "@interfaces/dotto/postList";
 import { DottoPostListLoading } from "./DottoPostListLoading";
+import Link from "next/link";
 
 interface DottoPostListProps {
   posts: DottoPostListState[];
@@ -17,9 +18,9 @@ export const DottoPostList = ({
     <S.DottoPostListLayout>
       {isLoading && <DottoPostListLoading />}
       {posts.map((post) => (
-        <Fragment key={post.postId}>
+        <Link href={`/design/${post.postId}`} key={post.postId}>
           <DottoPostCard post={post} />
-        </Fragment>
+        </Link>
       ))}
     </S.DottoPostListLayout>
   );

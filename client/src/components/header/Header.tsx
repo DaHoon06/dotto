@@ -1,5 +1,5 @@
 import { HeaderLayout } from "@layouts/HeaderLayout";
-import { ReactElement } from "react";
+import React, { forwardRef, ReactElement, Ref } from "react";
 import { DottoLogo } from "@components/common/logo/DottoLogo";
 import styled from "styled-components";
 import { MenuList } from "@components/header/MenuList";
@@ -21,25 +21,32 @@ const HeaderContainer = styled.div`
   }
 `;
 
-export const Header = (): ReactElement => {
-  return (
-    <HeaderLayout>
-      <HeaderContainer>
-        <FlexBox
-          $justifyContent={"flex-start"}
-          $alignItems={"flex-start"}
-          $flexDirection={"row"}
-          $flexWrap={"nowrap"}
-        >
-          <Link href={'/'}>
-            <DottoLogo />
-          </Link>
-          <SearchBar onAddKeyword={() => {}} />
-        </FlexBox>
-        <ProfileBox />
-        <MenuList />
-      </HeaderContainer>
-      <MobileHeader />
-    </HeaderLayout>
-  );
-};
+export const Header = forwardRef<HTMLDivElement, React.PropsWithChildren<any>>(
+  (props: any, ref: Ref<any>) => {
+    const { isScrolled } = props;
+
+    return (
+      <HeaderLayout isScrolled={isScrolled} ref={ref}>
+        {!isScrolled ? (
+          <HeaderContainer>
+            <FlexBox
+              $justifyContent={"flex-start"}
+              $alignItems={"flex-start"}
+              $flexDirection={"row"}
+              $flexWrap={"nowrap"}
+            >
+              <Link href={"/"}>
+                <DottoLogo />
+              </Link>
+              <SearchBar onAddKeyword={() => {}} />
+            </FlexBox>
+            <ProfileBox />
+            <MenuList />
+          </HeaderContainer>
+        ) : (
+          <MobileHeader />
+        )}
+      </HeaderLayout>
+    );
+  }
+);

@@ -18,7 +18,7 @@ export const DesignPageLayout = styled.div`
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1440px;
   min-height: 100vh;
   height: 100%;
   padding-bottom: 1em;

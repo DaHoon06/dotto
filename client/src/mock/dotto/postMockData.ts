@@ -250,7 +250,7 @@ export const postListMockData: DottoPostListState[] = [
     tags: ["서울 홍대", "라인워크", "미니타투"],
   },
   {
-    postId: "qblC",
+    postId: "qblC1",
     thumbnails: [
       {
         name: "샘플1",
@@ -487,7 +487,7 @@ export const postListMockData: DottoPostListState[] = [
     tags: ["서울 홍대", "라인워크", "미니타투"],
   },
   {
-    postId: "qblC",
+    postId: "qblC5",
     thumbnails: [
       {
         name: "샘플1",
@@ -724,7 +724,7 @@ export const postListMockData: DottoPostListState[] = [
     tags: ["서울 홍대", "라인워크", "미니타투"],
   },
   {
-    postId: "aqblC",
+    postId: "aqblC2",
     thumbnails: [
       {
         name: "샘플1",

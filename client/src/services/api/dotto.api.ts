@@ -29,3 +29,10 @@ export const dottoPostListApi = async (
   const { data } = await axiosInstance.get(url);
   return data.data;
 };
+export const dottoPostDetailApi = async (postId: string) => {
+  const url = `/dotto/posts/details/${postId}`;
+  console.log("쏘왔?");
+  const { data } = await axiosInstance.get(url);
+  console.log(data);
+  return data.data;
+};
