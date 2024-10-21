@@ -1,6 +1,14 @@
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import { dottoPostDetailApi } from "@services/api/dotto.api";
 import { useEffect } from "react";
+import { DottoDetails } from "@components/dotto/details/DottoDetails";
+import styled from "styled-components";
+
+const DesignDetailLayout = styled.div`
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+`;
 
 const DesignDetailPage = () => {
   useEffect(() => {
@@ -9,7 +17,11 @@ const DesignDetailPage = () => {
       console.log(data);
     });
   }, []);
-  return <div>상세보기</div>;
+  return (
+    <DesignDetailLayout>
+      <DottoDetails />
+    </DesignDetailLayout>
+  );
 };
 
 export const getServerSideProps: GetServerSideProps = async (
