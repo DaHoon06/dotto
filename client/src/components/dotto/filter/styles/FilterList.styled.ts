@@ -6,7 +6,10 @@ export const FilterListLayout = styled.div`
   position: sticky;
   top: 100px;
   height: 100%;
-  /* padding-left: 4vw; */
+
+  ${({ theme }) => theme.media.mobile} {
+    display: none;
+  }
 `;
 
 export const FilterListContainer = styled.aside`
@@ -16,10 +19,6 @@ export const FilterListContainer = styled.aside`
 
   .filter_list {
     padding: 40px 0px;
-  }
-
-  ${({ theme }) => theme.media.mobile} {
-    display: none;
   }
 `;
 

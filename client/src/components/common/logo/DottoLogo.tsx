@@ -5,9 +5,11 @@ import { ReactElement } from "react";
 const DottoLogoLayout = styled.span`
   display: inline-block;
   width: 103px;
+  height: auto;
 
-  .logo {
-    min-width: 82px;
+  @media screen and (max-width: 767px) {
+    width: 103px;
+    height: 40px;
   }
 `;
 
