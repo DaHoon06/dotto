@@ -33,3 +33,5 @@ export const HeaderLayout = forwardRef<any, HeaderProps>((props, ref) => {
     </Header>
   );
 });
+
+HeaderLayout.displayName = "HeaderLayout";

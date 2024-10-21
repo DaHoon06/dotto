@@ -50,3 +50,5 @@ export const Header = forwardRef<HTMLDivElement, React.PropsWithChildren<any>>(
     );
   }
 );
+
+Header.displayName = "Header";
