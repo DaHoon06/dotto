@@ -8,7 +8,8 @@ type ButtonGroupProps = {
 };
 
 const ButtonGroupLayout = styled.section`
-  height: 68px;
+  min-height: 68px;
+  height: auto;
   padding: 10px 0;
 
   .button-group {
@@ -45,14 +46,16 @@ const RequestButton = styled.button`
 export const ButtonGroup = ({ postId }: ButtonGroupProps): ReactElement => {
   return (
     <ButtonGroupLayout>
-      <FlexBox $flexDirection="row" $justifyContent="space-between">
+      <FlexBox $flexDirection="row" $justifyContent="space-between" $gap={10}>
         <p>이 제품이 맘에 드시나요?</p>
         <div className="button-group">
-          <PickButton type={"button"}>
+          <PickButton type={"button"} onClick={() => alert("찜꽁")}>
             <BsPinAngle color={"#ff5831"} size={20} />
             찜하기
           </PickButton>
-          <RequestButton type={"button"}>의뢰하기</RequestButton>
+          <RequestButton type={"button"} onClick={() => alert("이거 의뢰해요")}>
+            의뢰하기
+          </RequestButton>
         </div>
       </FlexBox>
     </ButtonGroupLayout>

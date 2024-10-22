@@ -1,6 +1,9 @@
 import { FlexBox } from "@components/common/boxes";
 import styled from "styled-components";
 import { ButtonGroup } from "./ButtonGroup";
+import Description from "@components/dotto/details/Description";
+import Profile from "@components/dotto/details/Profile";
+import Tags from "@components/dotto/details/Tags";
 
 const ImageWrapper = styled.div`
   max-width: 640px;
@@ -39,7 +42,7 @@ const ContentsLayout = styled.div`
 
 const ContentBody = styled.div`
   max-width: 512px;
-  padding: 8px 24px;
+  width: 100%;
 
   .content-top {
     height: auto;
@@ -73,21 +76,6 @@ const ContentBody = styled.div`
         color: #222222;
         font-size: 14px;
       }
-    }
-  }
-
-  .tag-container {
-    display: flex;
-    gap: 8px;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-items: center;
-
-    .tag {
-      background-color: #fff;
-      border: 1px solid #e2e2e2;
-      padding: 8px 12px;
-      color: #e2e2e2;
     }
   }
 `;
@@ -129,31 +117,21 @@ export const DottoDetails = () => {
 
             <hr />
 
-            <div>
-              두달동안 할인가에 진행되고 있는 인기 최고 꽃과 레터링 입니다. 꽃은
-              손님의 탄생화로 수정해 드렸고 레터링은 기존 글씨체에 좋아 하시는
-              글귀를 넣어 작업했습니다 꽃, 글씨체 수정 등 요청사항다
-              반영해드립니다! 편하게 메세지 주세요!
-            </div>
+            <Description
+              content={
+                "두달동안 할인가에 진행되고 있는 인기 최고 꽃과 레터링 입니다. <br /> 꽃은 손님의 탄생화로 수정해 드렸고 레터링은 기존 글씨체에 좋아 하시는 글귀를 넣어 작업했습니다. <br /> 꽃, 글씨체 수정 등 요청사항 다 반영해드립니다! <br />  편하게 메세지 주세요!"
+              }
+            />
 
-            <div className="tag-container">
-              <span className="tag">블랙워크</span>
-              <span className="tag">꽃</span>
-              <span className="tag">레터링</span>
-            </div>
+            <Tags tags={["블랙워크", "꽃", "레터링"]} />
 
-            <div>
-              <FlexBox $flexDirection="row" $justifyContent="space-between">
-                <div>프로필</div>
-                <div>
-                  <FlexBox>
-                    <p>타투아이디</p>
-                    <p>팔로워 1000명</p>
-                  </FlexBox>
-                  <button>팔로우</button>
-                </div>
-              </FlexBox>
-            </div>
+            <Profile
+              user={{
+                userId: "test",
+                follow: 10,
+                nickname: "전다훈",
+              }}
+            />
           </ContentBody>
         </ContentsLayout>
         <div>

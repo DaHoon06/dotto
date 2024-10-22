@@ -6,8 +6,8 @@ import styled from "styled-components";
 
 const DesignDetailLayout = styled.div`
   width: 100%;
-  max-width: 1440px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
 `;
 
 const DesignDetailPage = () => {
