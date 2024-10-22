@@ -5,13 +5,14 @@ export const DottoPostCardLayout = styled.article`
   width: auto;
   border: none;
   overflow: hidden;
-  padding-bottom: 0.4em;
+  padding-bottom: 0.8em;
   position: relative;
   border-radius: 4px;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   transition: transform 0.2s, box-shadow 0.2s;
 
   &:hover {
